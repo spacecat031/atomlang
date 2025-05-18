@@ -29,3 +29,4 @@ print(op[anothervariable - avariable])
 print(op[anothervariable / avariable])
 print(op[avariable * anothervariable])</pre>
 
+for more information go to the [✨Variables✨ Documentation](https://github.com/spacecat031/atomlang/blob/main/docs/%E2%9C%A8variables%E2%9C%A8.md)
