@@ -50,3 +50,19 @@ print("its NOT equal!")
 print("yay")
 if.end //closes the if conditions so code below doesnt get included
 </pre>
+
+funfact:operations also work so like 
+
+<pre>if 5 ?= op[5 + 5]
+print("its NOT equal!")
+print("yay")
+if.end //closes the if conditions so code below doesnt get included
+</pre>
+
+or
+
+<pre>if 5 ?= op[1 + 4í]
+print("its equal!")
+print("yay")
+if.end //closes the if conditions so code below doesnt get included
+</pre>
