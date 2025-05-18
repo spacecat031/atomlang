@@ -5,7 +5,7 @@
 ![Stars](https://img.shields.io/github/stars/spacecat031/atomlang?style=social)
 ![Owned by](https://img.shields.io/badge/owned%20by-spacecat-blue)
 ![beginner](https://img.shields.io/badge/beginner-friendly-orange)
-[![Discord](https://img.shields.io/discord/your-server-id?label=Discord&logo=discord&style=for-the-badge)](https://discord.gg/uJqTBJ5yK4)
+[![Discord](https://img.shields.io/discord/uJqTBJ5yK4?label=Discord&logo=discord&style=for-the-badge)](https://discord.gg/uJqTBJ5yK4)
 
  
 atom lang is a programming lang made for beginners to learn programming inspired by python.made in python.
