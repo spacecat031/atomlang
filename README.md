@@ -5,7 +5,7 @@
 ![Stars](https://img.shields.io/github/stars/spacecat031/atomlang?style=social)
 ![Owned by](https://img.shields.io/badge/owned%20by-spacecat-blue)
 ![beginner](https://img.shields.io/badge/beginner-friendly-orange)
-[![Follow @spacecat031](https://img.shields.io/twitter/follow/spacecat031?label=Follow&style=social&logo=x)](https://x.com/[[SpacecatSu91015](SpacecatSu91015)](SpacecatSu91015))
+[![Follow @SpacecatSu91015](https://img.shields.io/twitter/follow/SpacecatSu91015?label=Follow&style=social&logo=x)](https://x.com/SpacecatSu91015)
 
 
 [![Discord](https://img.shields.io/discord/1373608272166256670?label=Discord&logo=discord&style=for-the-badge)](https://discord.gg/uJqTBJ5yK4)
