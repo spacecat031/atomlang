@@ -61,7 +61,7 @@ if.end //closes the if conditions so code below doesnt get included
 
 or
 
-<pre>if 5 ?= op[1 + 4í]
+<pre>if 5 ?= op[1 + 4]
 print("its equal!")
 print("yay")
 if.end //closes the if conditions so code below doesnt get included
