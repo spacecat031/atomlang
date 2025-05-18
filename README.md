@@ -1,4 +1,7 @@
-# atomlang
+<p align="left">
+  <img src="https://share.sketchpad.app/25/dfd-d2c2-bb0488.png" alt="AtomLang Banner" width="40%"/>
+</p>
+
 ![Stars](https://img.shields.io/github/stars/spacecat031/atomlang?style=social)
 ![Owned by](https://img.shields.io/badge/owned%20by-spacecat-blue)
 ![beginner](https://img.shields.io/badge/beginner-friendly-orange)
