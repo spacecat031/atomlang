@@ -21,3 +21,6 @@ then open the compiler and in the explorer window your in drag the file into the
 <sub>(Don’t ask why my username is Farka — we bought the laptop like this lol)</sub>
 
 now just press enter and boom you got a hello world program!
+
+![image](https://github.com/user-attachments/assets/2aac4f0f-3092-4fe0-a061-1b540723e5c1)
+
