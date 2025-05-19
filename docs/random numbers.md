@@ -1,6 +1,6 @@
-# random numbers
+# random numbers <sub>added in 2025.1</sub>
 
-ever wanted to make a random number in a range? no me neither but i have to make this doc interesting:
+ever wanted to make a random number in a range? no? me neither but i have to make this doc interesting:
 
 ### replace min and max with the minimum of the random number and the maxmum for example 5 - 8
 <pre>num.random(min - max)</pre>
