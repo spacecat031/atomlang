@@ -1,3 +1,7 @@
+import random
+import subprocess
+from tkinter import Tk, filedialog
+
 def run_custom_code(lines):
     i = 0
     loop_start = None
@@ -7,10 +11,8 @@ def run_custom_code(lines):
     while i < len(lines):
         line = lines[i].strip()
 
-        # Remove comments
         if '//' in line:
             line = line.split('//')[0].strip()
-
         if not line:
             i += 1
             continue
@@ -30,7 +32,14 @@ def run_custom_code(lines):
                     name = name.strip()
                     value = value.strip()
 
-                    if value.startswith('"') and value.endswith('"'):
+                    # num.random(min - max)
+                    if value.startswith("num.random(") and value.endswith(")"):
+                        minmax = value[len("num.random("):-1].split('-')
+                        min_val = int(minmax[0].strip())
+                        max_val = int(minmax[1].strip())
+                        variables[name] = random.randint(min_val, max_val)
+
+                    elif value.startswith('"') and value.endswith('"'):
                         variables[name] = value.strip('"')
                     else:
                         variables[name] = eval(value, {}, variables)
@@ -40,44 +49,44 @@ def run_custom_code(lines):
             except Exception as e:
                 print(f"Error in variable declaration: {e}")
 
-        # if statements
+        # if statements (== or ?=)
         elif line.startswith("if ") and ("==" in line or "?=" in line):
             condition_line = line[3:].strip()
             negate = "?=" in condition_line
-            comparator = "!=" if negate else "=="
             parts = condition_line.split("?=" if negate else "==")
 
             try:
                 left = parts[0].strip()
                 right = parts[1].strip()
 
-                # Evaluate op[...] if used
-                if left.startswith("op[") and left.endswith("]"):
-                    left = eval(left[3:-1], {}, variables)
-                elif left in variables:
-                    left = variables[left]
-                else:
-                    left = eval(left, {}, variables)
+                def eval_expr(expr):
+                    if expr.startswith("op[") and expr.endswith("]"):
+                        return eval(expr[3:-1], {}, variables)
+                    if expr in variables:
+                        return variables[expr]
+                    return eval(expr, {}, variables)
 
-                if right.startswith("op[") and right.endswith("]"):
-                    right = eval(right[3:-1], {}, variables)
-                elif right in variables:
-                    right = variables[right]
-                else:
-                    right = eval(right, {}, variables)
-
-                condition = (left != right) if negate else (left == right)
+                left_val = eval_expr(left)
+                right_val = eval_expr(right)
+                condition = (left_val != right_val) if negate else (left_val == right_val)
                 if not condition:
                     skip_until = 'if.end'
-
             except Exception as e:
                 print(f"Error in if condition: {e}")
                 skip_until = 'if.end'
 
         elif line == "if.end":
-            pass  # Handled above
+            pass
 
-        # Operation: print(op[...])
+        # start(appname)
+        elif line.startswith("start(") and line.endswith(")"):
+            app = line[len("start("):-1].strip().strip('"')
+            try:
+                subprocess.Popen(app)
+            except Exception as e:
+                print(f"Failed to start app: {e}")
+
+        # print(op[...])
         elif line.startswith("print(op[") and line.endswith("])"):
             expression = line[len("print(op["):-2].strip()
             try:
@@ -86,17 +95,33 @@ def run_custom_code(lines):
             except Exception as e:
                 print(f"Error in op expression: {e}")
 
-        # Regular print
-        elif line.startswith('print(') and line.endswith(')'):
-            to_print = line[len('print('):-1].strip()
-            try:
-                if to_print in variables:
-                    print(variables[to_print])
-                else:
-                    result = eval(to_print, {}, variables)
-                    print(result)
-            except Exception as e:
-                print(f"Error in print statement: {e}")
+        # print(...) with num.random or comparison
+        elif line.startswith("print(") and line.endswith(")"):
+            content = line[len("print("):-1].strip()
+
+            if "?=" in content:
+                parts = content.split("?=")
+                left = parts[0].strip()
+                right = parts[1].strip()
+                try:
+                    left_val = variables.get(left, eval(left, {}, variables))
+                    right_val = variables.get(right, eval(right, {}, variables))
+                    print(left_val != right_val)
+                except:
+                    print("False")
+            else:
+                try:
+                    if content.startswith("num.random(") and content.endswith(")"):
+                        minmax = content[len("num.random("):-1].split('-')
+                        min_val = int(minmax[0].strip())
+                        max_val = int(minmax[1].strip())
+                        print(random.randint(min_val, max_val))
+                    elif content in variables:
+                        print(variables[content])
+                    else:
+                        print(eval(content, {}, variables))
+                except Exception as e:
+                    print(f"Error in print: {e}")
 
         elif line == 'loop':
             loop_start = i + 1
@@ -115,11 +140,16 @@ def run_custom_code(lines):
 
 
 def main():
-    print(" ")
-    print("atom compiler 2025.0")
-    print(" ")
-    print("by SPACECAT")
-    path = input("Enter the path to your .atom code file: ").strip()
+    print("\natom compiler 2025.1\n")
+    print("by SPACECAT\n")
+
+    # File picker instead of input
+    Tk().withdraw()
+    path = filedialog.askopenfilename(filetypes=[("Atom Files", "*.atom"), ("All Files", "*.*")])
+    if not path:
+        print("No file selected.")
+        return
+
     try:
         with open(path, 'r') as f:
             code_lines = f.readlines()
