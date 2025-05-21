@@ -1,4 +1,4 @@
-# wait
+# wait <sub>added in 2025.2</sub>
 
 waiting is a function thats used to pause a program for a certain amount of time.
 
