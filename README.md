@@ -16,3 +16,7 @@ atom lang is a programming lang made for beginners to learn programming inspired
 [📁 for the documentation please click here](https://github.com/spacecat031/atomlang/tree/main/docs)
 
 get the latest compiler release [here](https://github.com/spacecat031/atomlang/releases/tag/latest)
+
+
+![st](https://img.shields.io/badge/special%20thanks:-typiece-ff69b4)
+![st](https://img.shields.io/badge/special%20thanks%20to-MIKU-39C5BB)
