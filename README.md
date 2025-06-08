@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="https://share.sketchpad.app/25/ff4-ced1-d33e89.png" alt="AtomLang Banner" width="35%"/>
+  <img src="https://share.sketchpad.app/25/95d-09ea-3c1ab2.png" alt="AtomLang Banner" width="35%"/>
 </p>
 <sub>logo will be replaced once pride month ends</sub>
 
