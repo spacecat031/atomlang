@@ -1,6 +1,7 @@
 <p align="left">
   <img src="https://share.sketchpad.app/25/ff4-ced1-d33e89.png" alt="AtomLang Banner" width="35%"/>
 </p>
+<sub>logo will be replaced once pride month ends</sub>
 
 ![Stars](https://img.shields.io/github/stars/spacecat031/atomlang?style=social)
 ![Owned by](https://img.shields.io/badge/owned%20by-spacecat-blue)
