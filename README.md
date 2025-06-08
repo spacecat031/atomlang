@@ -1,5 +1,5 @@
 <p align="left">
-  <img src="https://share.sketchpad.app/25/7b3-6679-29561d.png" alt="AtomLang Banner" width="35%"/>
+  <img src="https://share.sketchpad.app/25/ff4-ced1-d33e89.png" alt="AtomLang Banner" width="35%"/>
 </p>
 
 ![Stars](https://img.shields.io/github/stars/spacecat031/atomlang?style=social)
