@@ -1,51 +1,40 @@
-# Atom Language License  
-**Version 1.1 – May 2025**  
+Atom Language License
+Version 1.2 – June 2025
 Copyright © 2025 SpaceCat
 
----
+1. Permission to Use, Modify, and Distribute
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Atom Language, including its compiler and related tools (collectively, the “Software”), to use, modify, compile, and distribute the Software for any purpose, including personal, academic, or commercial use, subject to the terms of this License.
 
-## 1. Permission to Use and Modify
+2. Conditions for Redistribution
+Redistribution of the Software, whether modified or unmodified, is permitted under the following conditions:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of the Atom Language, including its compiler and related tools (collectively, the “Software”), to use, modify, and compile the Software for personal, academic, or commercial purposes, subject to the conditions set forth in this License.
+If distributing unmodified copies, the original license and copyright notice must be included.
 
----
+If distributing modified versions, the following must be ensured:
 
-## 2. Redistribution Conditions
+Modified files are clearly marked as such.
 
-a. Redistribution of the Software in its **unmodified form** is **not permitted**.  
-b. Redistribution of **modified versions** of the Software is allowed, provided that:  
-- All modified files are clearly marked as such.  
-- The modified version does not misrepresent itself as the original Software.  
-- The original author(s) are properly credited.
+The Software is not misrepresented as the original version.
 
----
+Attribution is given to the original author(s) (e.g., “Based on Atom Language by SpaceCat”).
 
-## 3. Restriction on Copying Compiler and Source Code
+3. Use of Source Code
+The source code of the Atom Language and its compiler may be reused or integrated into other projects, provided that:
 
-The copying, reuse, or inclusion of the original source code of the Atom Language or its compiler, whether in whole or in part, in any other project or software, is **strictly prohibited** without **prior written permission** from the copyright holder.
+Attribution to the original author is maintained.
 
-To request permission, contact: **spacecat.supp0rt@gmail.com**
+The new project does not falsely claim ownership of the original code.
 
----
+Substantial reuse should include a reference to the original repository or author.
 
-## 4. Ownership of Created Projects
+4. Ownership of Created Projects
+Projects, programs, or works created using the Software are the property of their respective creators. This License does not claim any ownership over user-created works.
 
-Projects, programs, or works created using the Software are the sole property of their respective creators and are **not** considered the property of the author or copyright holder of the Software.
+5. Acceptable Use
+The Software must not be used for unlawful purposes. Users are responsible for ensuring compliance with local laws and regulations.
 
----
+6. No Warranty
+The Software is provided “as is,” without warranty of any kind, express or implied. The author(s) are not liable for any damages or losses resulting from the use of the Software.
 
-## 5. Prohibited Uses
-
-The Software may not be used, either directly or indirectly, for any activity that violates applicable laws or regulations. The use of the Software for unlawful purposes, including but not limited to criminal activity, is expressly prohibited.
-
----
-
-## 6. Disclaimer of Warranty
-
-The Software is provided “as is,” without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability arising from the use or distribution of the Software.
-
----
-
-## 7. Trademark Notice
-
-This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Software, except as required for accurate attribution.
+7. Trademark Notice
+This License does not grant rights to use the name “Atom Language” or associated marks for branding or endorsement, except for accurate attribution or descriptive reference.
